@@ -1,0 +1,157 @@
+body {
+    background: url('istockphoto-1323821548-612x612.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* Change text color to white for better contrast */
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Add these keyframes at the beginning of your CSS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to your sections */
+.profile, .interests, .contact {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Optional: Add a delay for each section for a staggered effect */
+.profile {
+    animation-delay: 0.5s;
+}
+.interests {
+    animation-delay: 1s;
+}
+.contact {
+    animation-delay: 1.5s;
+}
+
+/* Apply the bounce animation to the profile picture */
+.profile-picture img {
+    animation: bounce 2s infinite;
+}
+
+/* Add these keyframes at the beginning of your CSS */
+@keyframes colorChange {
+    0% {
+        background-color: #333;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #333;
+    }
+}
+
+/* Apply the color change animation to the header and footer */
+header, footer {
+    animation: colorChange 5s infinite;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* More semi-transparent */
+    color: #fff;
+    position: relative;
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px auto; /* Align center */
+    width: 90%; /* Adjust width */
+    max-width: 1200px; /* Set a max-width */
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-top: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding text shadow */
+}
+
+.profile, .interests, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.6); /* More transparent background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease; /* Animation on hover */
+    position: relative;
+    color: #333; /* Adjust text color inside the sections */
+}
+
+.profile:hover, .interests:hover, .contact:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.profile:before, .interests:before, .contact:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: none; /* Remove white borders */
+    filter: drop-shadow(0 0 10px #ffffff); /* Shining white neon effect */
+}
+
+.profile-picture {
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border: none; /* Remove border */
+}
+
+.profile-bio {
+    text-align: center;
+}
+
+.interests ul, .contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+li::before {
+    content: '✓';
+    color: #0ba29d;
+    padding-right: 0.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* More semi-transparent */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px auto; /* Align center */
+    width: 90%; /* Adjust width */
+    max-width: 1200px; /* Set a max-width */
+}
+
+footer p {
+    margin: 5px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding text shadow */
+}
